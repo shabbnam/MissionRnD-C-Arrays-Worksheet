@@ -14,7 +14,37 @@ NOTES:
 */
 
 #include <stdio.h>
+int search(int *Arr, int score, int len, int *m)
+{
+	
+	int i;
+	for (i = 0; Arr[i]<score&&i<len; i++);
+	if (Arr[i] == score)
+	{
+		if ((i == 0)){
+			*m = 0;
+		}
+		else
+			*m = len - (i + 1);
+	}
+	else
+		*m = len - i;
+	return i;
 
+
+
+
+}
 void * studentsCount(int *Arr, int len, int score, int *lessCount, int *moreCount) {
+	int m = 0;
+	if (Arr == NULL || len <= 0)return NULL;
+	else
+	{
+		*lessCount=search(Arr, score, len, &m);
+		*moreCount = m;
+
+	}
+
+	
 	return NULL;
 }

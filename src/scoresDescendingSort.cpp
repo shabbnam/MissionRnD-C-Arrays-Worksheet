@@ -21,5 +21,8 @@ struct student {
 };
 
 void * scoresDescendingSort(struct student *students, int len) {
+	if (students == NULL || len <= 0)return NULL;
+
+
 	return NULL;
 }
