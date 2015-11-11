@@ -18,7 +18,7 @@ int * sortedArrayInsertNumber(int *Arr, int len, int num)
 {
 	if (Arr == NULL || len <= 0)return NULL;
 	Arr = (int*)realloc(Arr,sizeof(int)*(len+1));
-	int i = len - 2;
+	int i = len - 1;
 
 	while (num<Arr[i] && i >= 0)
 
